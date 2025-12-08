@@ -36,15 +36,12 @@
         <spring-cloud.version>2023.0.5</spring-cloud.version>
     </properties>
 
-    <!-- 2. DEPENDENCY MANAGEMENT: Crucial for Spring Cloud -->
-    <!-- The "Properties in parent definition are prohibited" warning is often misleading, but
-         the actual fix is importing the Spring Cloud BOM here. -->
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
+                <version>2023.0.3</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -142,7 +139,12 @@
             <artifactId>spring-cloud-commons</artifactId>
         </dependency>
 
-        <!-- The second, conflicting declaration of spring-cloud-commons is removed. -->
+
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
 
     </dependencies>
 

@@ -106,4 +106,9 @@ public class AuthController {
                     .body(Map.of("error", "Nom d'utilisateur ou mot de passe incorrect."));
         }
     }
+    @GetMapping("/hello")
+    public String sayHelloTest() {
+        // Renvoie une chaîne confirmant l'identité du service et son port
+        return "SUCCESS: Bonjour de l'Équipe 'Qui êtes-vous ?' (User-Service).";
+    }
 }
